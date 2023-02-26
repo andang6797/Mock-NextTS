@@ -17,7 +17,7 @@ const Login: NextPage = () => {
 
   const { values, handleSubmit, setValues } = useFormik({
     initialValues: initUser,
-	validationSchema: loginSchema,
+    validationSchema: loginSchema,
     onSubmit: (values) => {
       console.log(values);
     },
