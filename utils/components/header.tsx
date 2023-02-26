@@ -3,9 +3,11 @@ import type { MenuProps } from "antd";
 
 const { Header } = Layout;
 
-const items1: MenuProps["items"] = ["1", "2", "3"].map((key) => ({
+const pages = ["Admin", "Home", "Audit"]
+
+const items1: MenuProps["items"] = pages.map((key) => ({
   key,
-  label: `nav ${key}`,
+  label: key,
 }));
 
 export const MainHeader = () => {

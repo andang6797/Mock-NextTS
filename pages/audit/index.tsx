@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
-import { MainLayout } from "utils/components/Layout";
+import { MainLayout } from "utils/components/layout";
 
 const Audit: NextPage = () => {
   return (
-    <MainLayout>
+    <MainLayout title="Audit">
       <h1> THIS IS AUDIT PAGE </h1>
     </MainLayout>
   );

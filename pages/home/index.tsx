@@ -1,10 +1,9 @@
 import type { NextPage } from "next";
-import { Header } from "utils/components/header";
-import { MainLayout } from "utils/components/Layout";
+import { MainLayout } from "utils/components/layout";
 
 const Home: NextPage = () => {
   return (
-    <MainLayout>
+    <MainLayout title="Home">
       <h1> THIS IS HOME PAGE </h1>
     </MainLayout>
   );
