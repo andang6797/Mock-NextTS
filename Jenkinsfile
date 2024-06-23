@@ -1,21 +1,28 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Move to git Folder ') {
             steps {
-                echo 'Connect to git'
-                git branch: 'main', url: 'https://github.com/andang6797/Mock-NextTS.git'
-                echo 'Building..'
+                echo 'Move to repo folder'
+                sh 'cd G:\\Mock-NextTS'
             }
         }
-        stage('Test') {
+        stage('Clone from git') {
+            steps {
+                echo 'Connect git'
+                git branch: 'main', url: 'https://github.com/andang6797/Mock-NextTS.git'
+            }
+        }
+        stage('Test ') {
             steps {
                 echo 'Testing..'
             }
         }
-        stage('Deploy') {
+        stage('Build') {
             steps {
-                echo 'Deploying....'
+                echo 'Building....'
+                sh 'npm run build'
+                echo 'build Success'
             }
         }
     }
