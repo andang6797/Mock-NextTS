@@ -1,6 +1,14 @@
 pipeline {
     agent any
+    tools {nodejs "nodejs"}
     stages {
+        stage('Test npm') {
+            steps {
+                sh """
+                npm --version
+                """
+            }
+        }
         stage('Clone from git') {
             steps {
                 echo 'Connect git'
