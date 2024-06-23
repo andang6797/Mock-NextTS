@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Move to git Folder ') {
-            steps {
-                echo 'Move to repo folder'
-                sh 'cd G:\\Mock-NextTS'
-            }
-        }
         stage('Clone from git') {
             steps {
                 echo 'Connect git'
